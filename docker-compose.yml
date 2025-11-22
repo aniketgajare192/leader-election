@@ -1,0 +1,102 @@
+services:
+  coordinator:
+    build: .
+    container_name: coordinator
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=coordinator
+      - APP_ROLE=coordinator
+      - APP_POD_ID=coordinator-1
+      - APP_COORDINATOR_URL=http://coordinator:8080
+    networks:
+      - leader-election-network
+
+  app-pod-1:
+    build: .
+    container_name: app-pod-1
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pod1
+      - APP_ROLE=application
+      - APP_POD_ID=app-pod-1
+      - APP_COORDINATOR_URL=http://coordinator:8080
+      - APP_APPLICATION_PORT=8081
+      - SERVER_PORT=8081
+    depends_on:
+      - coordinator
+    networks:
+      - leader-election-network
+
+  app-pod-2:
+    build: .
+    container_name: app-pod-2
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pod2
+      - APP_ROLE=application
+      - APP_POD_ID=app-pod-2
+      - APP_COORDINATOR_URL=http://coordinator:8080
+      - APP_APPLICATION_PORT=8082
+      - SERVER_PORT=8082
+    depends_on:
+      - coordinator
+    networks:
+      - leader-election-network
+
+  app-pod-3:
+    build: .
+    container_name: app-pod-3
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pod3
+      - APP_ROLE=application
+      - APP_POD_ID=app-pod-3
+      - APP_COORDINATOR_URL=http://coordinator:8080
+      - APP_APPLICATION_PORT=8083
+      - SERVER_PORT=8083
+    depends_on:
+      - coordinator
+    networks:
+      - leader-election-network
+
+  app-pod-4:
+    build: .
+    container_name: app-pod-4
+    ports:
+      - "8084:8084"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pod4
+      - APP_ROLE=application
+      - APP_POD_ID=app-pod-4
+      - APP_COORDINATOR_URL=http://coordinator:8080
+      - APP_APPLICATION_PORT=8084
+      - SERVER_PORT=8084
+    depends_on:
+      - coordinator
+    networks:
+      - leader-election-network
+
+  app-pod-5:
+    build: .
+    container_name: app-pod-5
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pod5
+      - APP_ROLE=application
+      - APP_POD_ID=app-pod-5
+      - APP_COORDINATOR_URL=http://coordinator:8080
+      - APP_APPLICATION_PORT=8085
+      - SERVER_PORT=8085
+    depends_on:
+      - coordinator
+    networks:
+      - leader-election-network
+
+networks:
+  leader-election-network:
+

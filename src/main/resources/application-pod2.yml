@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: leader-election-pod2
+
+server:
+  port: 8082
+
+app:
+  role: application
+  pod-id: app-pod-2
+  coordinator-url: http://localhost:8080
+  application-port: 8082
+
+logging:
+  level:
+    com.flyra: INFO
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
