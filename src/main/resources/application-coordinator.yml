@@ -12,7 +12,7 @@ app:
 
 logging:
   level:
-    com.flyra: INFO
+    com.leaderelection: INFO
     root: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

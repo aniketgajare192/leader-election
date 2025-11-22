@@ -1,6 +1,6 @@
-package com.flyra.controller;
+package com.leaderelection.controller;
 
-import com.flyra.service.ApplicationPodService;
+import com.leaderelection.service.ApplicationPodService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

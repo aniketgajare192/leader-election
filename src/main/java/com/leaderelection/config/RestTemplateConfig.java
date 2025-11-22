@@ -1,4 +1,4 @@
-package com.flyra.config;
+package com.leaderelection.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

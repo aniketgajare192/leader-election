@@ -1,6 +1,6 @@
-package com.flyra;
+package com.leaderelection;
 
-import com.flyra.config.ApplicationConfig;
+import com.leaderelection.config.ApplicationConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

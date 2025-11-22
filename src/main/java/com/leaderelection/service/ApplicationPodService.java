@@ -1,6 +1,6 @@
-package com.flyra.service;
+package com.leaderelection.service;
 
-import com.flyra.config.ApplicationConfig;
+import com.leaderelection.config.ApplicationConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

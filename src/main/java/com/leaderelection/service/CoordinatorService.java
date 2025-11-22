@@ -1,6 +1,6 @@
-package com.flyra.service;
+package com.leaderelection.service;
 
-import com.flyra.model.PodInfo;
+import com.leaderelection.model.PodInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

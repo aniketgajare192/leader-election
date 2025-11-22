@@ -1,7 +1,7 @@
-package com.flyra.controller;
+package com.leaderelection.controller;
 
-import com.flyra.model.PodInfo;
-import com.flyra.service.CoordinatorService;
+import com.leaderelection.model.PodInfo;
+import com.leaderelection.service.CoordinatorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
